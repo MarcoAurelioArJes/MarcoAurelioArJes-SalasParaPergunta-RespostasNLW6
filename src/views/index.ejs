@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Criar Sala - Rocket.Q</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+        <!-- View Port -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/styles/styleHome.css">
+        <link rel="stylesheet" href="/styles/styleGlobal.css">
+        
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;wght@500;wght@700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="home" class="content">
+            <header>
+                <a href="/">
+                    <img src="/imagesProject/Logo.svg" alt="Rocket.Q Logo">
+                </a>    
+            </header>
+            
+            <div id="background">
+                <div class="ball top"></div>
+                <div class="ball bottom"></div>
+            </div>
+
+            <main>
+                <div class="container">
+                   <!-- Vai renderizar a parte correta de acordo com a url = renderiza - include-->
+                   <%- include(`parts/${page}`) %>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

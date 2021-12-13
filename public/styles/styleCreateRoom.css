@@ -1,0 +1,81 @@
+/*Conteúdo de todo o site*/
+.content {
+    /*Definindo a tag que encapsula tudo como uma grid*/
+    display: grid;
+
+    /*
+        Definindo quanto cada coluna irá ocupar
+        Nesse caso direita e esquerda
+    */
+    grid-template-columns: 50% 50%;
+
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas:"header header"
+    "left right"
+}
+
+header {
+    grid-area: header;
+}
+
+#background {
+    grid-area: left;
+
+    background: url('../imagesProject/imagem-background.svg') no-repeat, top/contain;
+    background-position-x: 0rem;
+
+}
+
+main {
+    grid-area: right;
+
+    display: flex;
+    align-items: center;
+    margin-top: -18rem;
+}
+
+main .container {
+    width: min(36.3rem, 100%);
+}
+
+main h2 {
+    font-family: "Poppins", sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+input {
+    border: 2px solid var(--grey-blue);
+    padding: 0 1.6rem;
+    outline: none;
+}
+
+input, button{
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+
+/* create balls */
+
+.ball {
+    clip-path: circle();
+    position: fixed;
+    background: var(--blue);
+    opacity: 0.1;
+}
+
+.ball.top {
+    width: 63.3rem;
+    height: 63.3rem;
+    top: -45rem;
+    right: -43rem;
+}
+
+.ball.bottom {
+    width: 21.2rem;
+    height: 21.2rem;
+    bottom: -14.8rem;
+    right: 5.6rem;
+}
